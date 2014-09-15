@@ -4,7 +4,7 @@
 <div class="container">
 
   <form class="chatContainer" ng-submit="addMsg(msg)">
-    <div class="chatBox"  ng-class-odd="'Odd'" data-ng-repeat="msg in msgs track by $index">
+    <div class="chatBox"  ng-class-odd="'Odd'" data-ng-repeat="msg in msgs">
       <p><span class="author">{{msg.username}}:</span> {{msg.content}}<span class="dateposted">{{msg.posteddate | date:'short'}}</span></p>
     </div>
         <input id="chatInput" type="text" placeholder="Become the cup..." ng-model="msg.content"></input>
