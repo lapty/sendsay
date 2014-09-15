@@ -3,12 +3,12 @@
 
 <div class="container">
 
-  <form class="chatContainer">
+  <form class="chatContainer" ng-submit="addMsg(msg)">
     <div class="chatBox"  ng-class-odd="'Odd'" data-ng-repeat="msg in msgs track by $index">
       <p><span class="author">{{msg.username}}:</span> {{msg.content}}<span class="dateposted">{{msg.posteddate | date:'short'}}</span></p>
     </div>
-        <input id="chatInput" type="text" placeholder="Become the cup..." ng-model="msg.content">
-        <button type="submit" data-ng-click="addMsg(msg)" style="display:none;"></button>
+        <input id="chatInput" type="text" placeholder="Become the cup..." ng-model="msg.content"></input>
+        <button id="chatSend" type="submit" data-ng-click="addMsg(msg)">Send</button>
   </form>
 
   <aside class="userList">
