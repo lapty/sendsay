@@ -4,5 +4,5 @@
  */
 
 exports.index = function(req, res){
-  res.render('index', { title: 'Express', ngApp: 'userModule' });
+  res.render('index', { title: 'Sendsay', ngApp: 'userModule' });
 };
