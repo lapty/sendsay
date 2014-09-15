@@ -8,7 +8,6 @@
       <p><span class="author">{{msg.username}}:</span> {{msg.content}}<span class="dateposted">{{msg.posteddate | date:'short'}}</span></p>
     </div>
         <input id="chatInput" type="text" placeholder="Become the cup..." ng-model="msg.content"></input>
-        <button id="chatSend" type="submit" data-ng-click="addMsg(msg)">Send</button>
   </form>
 
   <aside class="userList">

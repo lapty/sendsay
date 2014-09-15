@@ -69,11 +69,11 @@ a {
   left: 50px; }
 
 #chatSend {
-  width: 20px;
+  width: 75px;
   display: inline-block;
   position: fixed;
   bottom: 65px;
-  left: 700px; }
+  left: 675px; }
 
 .authorInput {
   width: 100px;
