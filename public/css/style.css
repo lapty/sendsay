@@ -50,23 +50,22 @@ a {
 
 .userList {
   width: 20%;
-  height: 475px;
+  height: 100%;
   margin-left: 5px;
   font-weight: bold;
   background-color: rgba(0, 0, 0, 0.1);
   display: inline-block;
   position: absolute;
-  overflow: auto;
-  float: right; }
+  overflow: auto; }
   .userList h3 {
     text-align: center;
     border-bottom: 1px black solid;
     font-size: 1.4em; }
 
 #chatInput {
-  width: 83%;
-  position: absolute;
-  bottom: 55px;
+  width: 100%;
+  position: fixed;
+  bottom: 10px;
   left: 10px; }
 
 .authorInput {
@@ -81,7 +80,7 @@ a {
 
 .chatContainer {
   width: 75%;
-  height: 475px;
+  height: 100%;
   padding-bottom: 15px;
   display: inline-block;
   vertical-align: top;
@@ -96,7 +95,9 @@ a {
 .container {
   display: inline-block;
   margin: 10px;
-  width: 85%; }
+  width: 85%;
+  position: fixed;
+  height: 75%; }
 
 .author {
   font-weight: bold; }
@@ -104,7 +105,9 @@ a {
 .water {
   margin-left: 30px;
   font-family: 'Permanent Marker', cursive;
-  font-size: 1.5em; }
+  font-size: 1.5em;
+  position: fixed;
+  bottom: 30px; }
   .water span {
     color: rgba(155, 0, 0, 0.7); }
 
@@ -126,12 +129,12 @@ a {
 
 @media screen and (min-width: 0) and (max-width: 981px) {
   #BRUCE {
-    bottom: -400px;
+    bottom: -50px;
     top: initial;
     right: initial;
     left: 40px;
     width: 100%;
-    opacity: 0.3;
+    opacity: 0.2;
     z-index: -1; }
   #BRUCE:hover {
     width: 100%; }
@@ -143,4 +146,13 @@ a {
   .water {
     width: 100%;
     margin: 5px;
-    font-size: 1.2em; } }
+    font-size: 1.2em; }
+  #chatInput {
+    bottom: 0px; }
+  .chatContainer {
+    padding-bottom: 5px; }
+    .chatContainer .chatbox {
+      margin-bottom: 5px; }
+  .userList section ul {
+    padding: 5px;
+    margin: 0px; } }
