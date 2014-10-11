@@ -1,3 +1,3 @@
-A responsive, chatroom application made with AngularJS, using https://github.com/calweb/baby-mean for MEAN stack.
+A responsive, Bruce Lee-themed chatroom application made with AngularJS, using https://github.com/calweb/baby-mean for MEAN stack.
 
-Deployed on heroku: https://sendsay.herokuapp.com
+Deployed on heroku: http://sendsay.herokuapp.com
