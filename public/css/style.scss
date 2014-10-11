@@ -11,13 +11,14 @@ background-repeat:no-repeat; */
       }
 }
 
+
 #BRUCE {
     background-image:url("../images/bruce1.png");
     background-size:cover;
     background-repeat:no-repeat;
     position:fixed;
     top:0px; right:0px;
-    width:32%;
+    width:250px;
     height:100%;
     transition:all .3s ease-in-out;
 }
@@ -42,6 +43,7 @@ h4 {
     font-family: 'Permanent Marker', cursive;
     text-align:center;
     font-size:2em;
+    width:100%;
     color:rgba(155,0,0,.7);
 }
 
@@ -56,14 +58,15 @@ a {
 }
 
 .userList {
-      width: 150px;
-      height: 450px;
+      width: 20%;
+      height: 475px;
       margin-left:5px;
       font-weight:bold;
       background-color:rgba(0,0,0,.1);
       display:inline-block;
       position:absolute;
       overflow:auto;
+      float:right;
       h3 {
           text-align:center;
           border-bottom:1px black solid;
@@ -71,11 +74,10 @@ a {
       }
 }
 #chatInput{
-      width: 607px;
-      display: inline-block;
-      position: fixed;
-      bottom: 65px;
-      left: 50px;
+      width: 83%;
+      position: absolute;
+      bottom: 55px;
+      left: 10px;
 }
 
 .authorInput{
@@ -91,8 +93,8 @@ a {
 }
 
 .chatContainer {
-      width: 607px;
-      height: 450px;
+      width: 75%;
+      height: 475px;
       padding-bottom:15px;
       display: inline-block;
       vertical-align: top;
@@ -102,12 +104,14 @@ a {
   .chatbox {
       margin-bottom:25px;
       padding:5px;
+      width:100%;
   }
 }
 
 .container {
      display:inline-block;
      margin:10px;
+     width:85%;
 
 }
 
@@ -141,4 +145,29 @@ a {
 .remove {
     font-size:.8em;
     color:black;
+}
+
+@media screen and (min-width:0) and (max-width:981px) {
+
+    #BRUCE {
+        bottom:-400px;
+        top:initial; right:initial;
+        left:40px;
+        width:100%;
+        opacity:.3;
+        z-index:-1;
+
+    }
+
+    #BRUCE:hover {
+        width:100%;
+    }
+    .container {
+        margin:0px; padding:0px; margin:5px; width:100%;
+    }
+    .water {
+        width:100%;
+        margin:5px;
+        font-size:1.2em;
+    }
 }

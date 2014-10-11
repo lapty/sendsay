@@ -1,27 +1,29 @@
 angular.module("userModule")
   .controller("userCtrl", function ($rootScope, $route, $scope, $timeout, $location, $cookies, $routeParams, $interval, userSvc) {
 
-// main CRUD functions
-$scope.getMsgs = $interval(function()
-     {
+
+
+
+    ////////////////
+    $scope.getMsgs = $interval(function()
+      {
            userSvc.getMsgs().success(function(msgs){
            $scope.msgs = msgs.reverse();
 
-     });
+      });
 
            userSvc.getUsers().then(function (users) {
            $scope.users = users.data;
 
         });
 
+
      }, 500);
 
 
     $scope.addUser = function (user) {
        userSvc.addUser({
-       username: user,
-     }).then(function () {
-         console.log("please be created.");
+       username: $scope.user,
      })
     };
 
@@ -43,10 +45,6 @@ $scope.getMsgs = $interval(function()
   $scope.username = $cookies.username;
 
     ///////////////Messages
-    userSvc.getMsgs().then(function (msgs) {
-      console.log(msgs)
-      $scope.msgs = msgs.data.reverse();
-    });
 
     $scope.addMsg = function (msg) {
       userSvc.addMsg({
@@ -61,8 +59,6 @@ $scope.getMsgs = $interval(function()
 
 
     /////////////////////////////////////listeners
-
-
     $rootScope.$on("user:deleted", function () {
       userSvc.getUsers().then(function (users) {
         $scope.users = users.data;
@@ -77,7 +73,7 @@ $scope.getMsgs = $interval(function()
 
     $rootScope.$on("message:added", function () {
       userSvc.getMsgs().then(function (msgs) {
-        $scope.msgs = msgs.data.reverse();
+        $scope.msgs = msgs.reverse();
     });
   });
 

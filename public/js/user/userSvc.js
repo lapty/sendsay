@@ -15,11 +15,6 @@ angular.module("userModule")
             })
         };
 
-        ///////cookie username
-        var addUsername = function(name) {
-          $cookies.username = name;
-        };
-
         var deleteUser = function(user) {
           return $http.delete(users + "/" + user._id, user).then(function (response) {
                 console.log(response);
@@ -28,6 +23,10 @@ angular.module("userModule")
             })
         };
 
+        ///////////cookie username
+        var addUsername = function(name) {
+          $cookies.username = name;
+        };
 
         ///////////////chatroom1
         var getMsgs = function(){
