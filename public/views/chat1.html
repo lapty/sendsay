@@ -4,7 +4,7 @@
 <div class="container">
 
   <div class="chatContainer">
-    <div class="chatBox"  ng-class-odd="'Odd'" data-ng-repeat="msg in msgs">
+    <div class="chatBox" id="chatBox"  ng-class-odd="'Odd'" data-ng-repeat="msg in msgs">
       <p><span class="author">{{msg.username}}:</span> {{msg.content}}<span class="dateposted">{{msg.posteddate | date:'short'}}</span></p>
     </div>
 </div>
@@ -20,7 +20,7 @@
 </div>
 
 <p class="water" ng-model="username">Be like water, young <span>{{username}}.</span></p>
-<form ng-submit="addMsg(msg)">
+<form ng-submit="addMsg(msg); scrollBot()">
 <input id="chatInput" type="text" placeholder="Become the cup..." ng-model="msg.content">
 </form>
 

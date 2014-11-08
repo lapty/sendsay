@@ -1,6 +1,7 @@
+
+
 angular.module("userModule")
   .controller("userCtrl", function ($rootScope, $route, $scope, $timeout, $location, $cookies, $routeParams, $interval, userSvc) {
-
 
 
 
@@ -57,6 +58,12 @@ angular.module("userModule")
 
     };
 
+    $scope.scrollBot = function () {
+        var objDiv = document.getElementById("chatBox");
+        objDiv.scrollTop = objDiv.scrollHeight;
+        console.log("dasf")
+    };
+
 
     /////////////////////////////////////listeners
     $rootScope.$on("user:deleted", function () {
@@ -69,12 +76,6 @@ angular.module("userModule")
       userSvc.getUsers().then(function (users) {
         $scope.users = users.data;
       });
-  });
-
-    $rootScope.$on("message:added", function () {
-      userSvc.getMsgs().then(function (msgs) {
-        $scope.msgs = msgs.reverse();
-    });
   });
 
 
